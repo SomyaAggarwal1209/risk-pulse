@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+
+{% block title %}Home - My Flask App{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    ]
+
+    <div class="home-content">
+        {% if request.args.get('alert') %}
+        <div class="alert success">
+            {{ request.args.get('alert') }}
+        </div>
+        {% endif %}
+
+        <h2>Explore Our Features</h2>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Chat</h3>
+                <p>Interact with our chatbot for assistance and support.</p>
+                <a href="{{ url_for('chat') }}" class="button">Go to Chat</a>
+            </div>
+            <div class="feature">
+                <h3>Dashboard</h3>
+                <p>View detailed analytics and reports in the dashboard.</p>
+                <a href="{{ url_for('dashboard') }}" class="button">Go to Dashboard</a>
+            </div>
+            <div class="feature">
+                <h3>About Us</h3>
+                <p>Learn more about our company and what we do.</p>
+                <a href="{{ url_for('about') }}" class="button">Learn More</a>
+            </div>
+            <div class="feature">
+                <h3>Contact</h3>
+                <p>Get in touch with us for any inquiries or support.</p>
+                <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

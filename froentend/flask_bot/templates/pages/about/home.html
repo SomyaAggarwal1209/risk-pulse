@@ -1,0 +1,35 @@
+{% extends "base2.html" %}
+
+{% block title %}Home - My Flask App{% endblock %}
+
+{% block content %}
+<section class="home-content">
+    <header>
+        <h1>Welcome to My Flask App</h1>
+        <p>This is the home page of your Flask application. Here you can find links to various sections of the site including the chat interface, dashboard, and more.</p>
+    </header>
+    
+    <div class="features">
+        <div class="feature">
+            <h3>Chat</h3>
+            <p>Interact with our chatbot for assistance and support.</p>
+            <a href="{{ url_for('chat_page_final') }}" class="button">Go to Chat</a>
+        </div>
+        <div class="feature">
+            <h3>Dashboard</h3>
+            <p>View detailed analytics and reports in the dashboard.</p>
+            <a href="{{ url_for('dashboard') }}" class="button">Go to Dashboard</a>
+        </div>
+        <div class="feature">
+            <h3>About Us</h3>
+            <p>Learn more about our company and what we do.</p>
+            <a href="{{ url_for('about') }}" class="button">Learn More</a>
+        </div>
+        <div class="feature">
+            <h3>Contact</h3>
+            <p>Get in touch with us for any inquiries or support.</p>
+            <a href="{{ url_for('contact') }}" class="button">Contact Us</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
