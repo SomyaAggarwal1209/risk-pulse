@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if request.args.get('action') == 'signup' %}Sign Up{% else %}Login{% endif %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>{% if request.args.get('action') == 'signup' %}Create an Account{% else %}Login{% endif %}</h1>
+        </div>
+        <form action="{% if request.args.get('action') == 'signup' %}{{ url_for('signup') }}{% else %}{{ url_for('login') }}{% endif %}" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            {% if request.args.get('action') == 'signup' %}
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            {% endif %}
+            <button type="submit" class="submit-button">{% if request.args.get('action') == 'signup' %}Sign Up{% else %}Login{% endif %}</button>
+        </form>
+        <div class="form-footer">
+            {% if request.args.get('action') == 'signup' %}
+            <p>Already have an account? <a href="?action=login">Login here</a></p>
+            {% else %}
+            <p>Don't have an account? <a href="?action=signup">Sign up here</a></p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

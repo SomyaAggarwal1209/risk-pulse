@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Prevention - My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms/scam_prevention.css') }}">
+</head>
+<body>
+    <main>
+        <h2>Scam Prevention</h2>
+        <form action="{{ url_for('scam_prevention') }}" method="post">
+            <label for="scam_details">Scam Details:</label>
+            <textarea id="scam_details" name="scam_details" required></textarea>
+
+            <label for="reporter_name">Your Name:</label>
+            <input type="text" id="reporter_name" name="reporter_name" required>
+
+            <label for="reporter_email">Your Email:</label>
+            <input type="email" id="reporter_email" name="reporter_email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

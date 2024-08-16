@@ -1,0 +1,76 @@
+{% extends "base2.html" %}
+
+{% block title %}Home - My Flask App{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+
+
+
+
+{% block content %}
+<main>
+    <div class="home-content">
+        {% if request.args.get('alert') %}
+        <div class="alert success">
+            {{ request.args.get('alert') }}
+        </div>
+        {% endif %}
+
+        <h2>Explore Our Features</h2>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Scam Prevention</h3>
+                <p>Explore our scam prevention model feature.</p>
+                <a href="{{ url_for('scam_prevention') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Trade Predictor</h3>
+                <p>View detailed analytics and reports in the dashboard.</p>
+                <a href="{{ url_for('trade_predictor') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Operational Risk Model</h3>
+                <p>Explore the operational vulnerabilities of our company.</p>
+                <a href="{{ url_for('operational_risk_model') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Market Risk Model</h3>
+                <p>Get market risk analysis.</p>
+                <a href="{{ url_for('market_risk_model') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Value at Risk Model</h3>
+                <p>Analyze market risk with our Value at Risk model.</p>
+                <a href="{{ url_for('value_at_risk_model') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Creditworthiness</h3>
+                <p>Evaluate credit risk effectively.</p>
+                <a href="{{ url_for('creditworthiness') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Loan Repayment Probability</h3>
+                <p>Predict loan repayment probability.</p>
+                <a href="{{ url_for('loan_repayment_probability') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Exposure at Default</h3>
+                <p>Assess exposure at default for better risk management.</p>
+                <a href="{{ url_for('exposure_at_default') }}" class="button">Explore</a>
+            </div>
+            <div class="feature">
+                <h3>Credit Risk Model</h3>
+                <p>Prevent credit risk with our model.</p>
+                <a href="{{ url_for('credit_risk_model') }}" class="button">Explore</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</main>
+{% endblock %}

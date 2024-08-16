@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operational Risk Model - My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms/operational_risk.css') }}">
+
+</head>
+<body>
+    <main>
+        <h2>Operational Risk Model</h2>
+        <form action="{{ url_for('operational_risk_model') }}" method="post">
+            <label for="risk_details">Risk Details:</label>
+            <textarea id="risk_details" name="risk_details" required></textarea>
+
+            <label for="reporter_name">Your Name:</label>
+            <input type="text" id="reporter_name" name="reporter_name" required>
+
+            <label for="reporter_email">Your Email:</label>
+            <input type="email" id="reporter_email" name="reporter_email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

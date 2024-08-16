@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Repayment Probability - My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms/loan_repayment_probability.css') }}">
+
+</head>
+<body>
+    <main>
+        <h2>Loan Repayment Probability</h2>
+        <form action="{{ url_for('loan_repayment_probability') }}" method="post">
+            <label for="loan_details">Loan Details:</label>
+            <textarea id="loan_details" name="loan_details" required></textarea>
+
+            <label for="reporter_name">Your Name:</label>
+            <input type="text" id="reporter_name" name="reporter_name" required>
+
+            <label for="reporter_email">Your Email:</label>
+            <input type="email" id="reporter_email" name="reporter_email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #1e1e1e;
+    color: #76ff03;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    margin: 0;
+    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #1e1e1e;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #76ff03;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Home Page Styles */
+.home-content {
+    text-align: center;
+    padding: 2rem;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns per row */
+    gap: 2rem; /* Space between grid items */
+    margin-top: 2rem;
+}
+
+.feature {
+    background-color: #1e1e1e;
+    border: 1px solid #76ff03;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better appearance */
+    transition: transform 0.3s, box-shadow 0.3s; /* Added transition for hover effects */
+}
+
+.feature h3 {
+    color: #76ff03;
+    margin-top: 0;
+}
+
+.feature p {
+    line-height: 1.6;
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #76ff03;
+    color: #121212;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s; /* Added transition for button hover effect */
+}
+
+.button:hover {
+    background-color: #64dd17;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e1e1e;
+    color: #76ff03;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .features {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .features {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .features {
+        grid-template-columns: 1fr; /* 1 column for small devices */
+    }
+}

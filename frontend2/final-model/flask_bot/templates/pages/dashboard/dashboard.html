@@ -1,0 +1,69 @@
+<header>
+    <h1>Risk Model Dashboard</h1>
+</header>
+<main>
+    <div class="dashboard-container">
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>Risk Overview</h2>
+            <div class="risk-summary">
+                <div class="risk-indicator">
+                    <h3>Total Risk Score</h3>
+                    <div class="risk-circle" id="riskCircle">
+                        <span class="risk-text" id="riskText">0%</span>
+                    </div>
+                </div>
+                <div class="risk-heatmap">
+                    <h3>Risk Heatmap</h3>
+                    <!-- Placeholder for heatmap visualization -->
+                    <div id="heatmap"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Metrics Section -->
+        <section class="metrics">
+            <h2>Risk Metrics</h2>
+            <div class="risk-metrics">
+                <div class="risk-trends">
+                    <h3>Risk Trends</h3>
+                    <!-- Placeholder for trends chart -->
+                    <div id="trendsChart"></div>
+                </div>
+                <div class="risk-by-category">
+                    <h3>Risk by Category</h3>
+                    <!-- Placeholder for category breakdown -->
+                    <div id="categoryChart"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Details Section -->
+        <section class="details">
+            <h2>Risk Details</h2>
+            <button id="showDetailsButton">Show Risk Details</button>
+            <div id="riskDetails" class="risk-details" style="display: none;">
+                <!-- Placeholder for detailed risk data -->
+                <p>Details will be displayed here.</p>
+            </div>
+        </section>
+
+        <!-- Interactive Elements -->
+        <section class="interactions">
+            <button id="generateReportButton">Generate Report</button>
+            <div id="reportSection" class="report-section" style="display: none;">
+                <h3>Report</h3>
+                <p id="reportContent">Your risk report will appear here.</p>
+                <button id="downloadReportButton">Download Report</button>
+            </div>
+        </section>
+
+       <!-- Alerts and Notifications -->
+       <section class="alerts">
+        <h2>Alerts</h2>
+        <div id="alertsSection">
+            <!-- Placeholder for alerts -->
+            <p>No current alerts.</p>
+        </div>
+    </section>
+</div>

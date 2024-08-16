@@ -1,0 +1,32 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    height: 100vh;
+}
+
+
+/* Header styles (optional, if you have headers) */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+    padding: 10px 0;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #76ff03;
+    margin: 0;
+}
+
+/* Block level styling for content sections */
+section {
+    padding: 20px;
+}
+

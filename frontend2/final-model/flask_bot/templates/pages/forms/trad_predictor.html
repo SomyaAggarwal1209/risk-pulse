@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Predictor - My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/forms/trade_predictor.css') }}">
+</head>
+<body>
+    <main>
+        <h2>Trade Predictor</h2>
+        <form action="{{ url_for('trade_predictor') }}" method="post">
+            <label for="trade_details">Trade Details:</label>
+            <textarea id="trade_details" name="trade_details" required></textarea>
+
+            <label for="predictor_name">Your Name:</label>
+            <input type="text" id="predictor_name" name="predictor_name" required>
+
+            <label for="predictor_email">Your Email:</label>
+            <input type="email" id="predictor_email" name="predictor_email" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>

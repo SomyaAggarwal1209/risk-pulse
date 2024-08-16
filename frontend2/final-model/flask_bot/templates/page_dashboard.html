@@ -1,0 +1,21 @@
+{% extends "base2.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/chat/dashboard.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main_d.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="main-dashboard-page-container">
+    <section class="dashboard-section">
+        {% include "pages/dashboard/dashboard.html" %}
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

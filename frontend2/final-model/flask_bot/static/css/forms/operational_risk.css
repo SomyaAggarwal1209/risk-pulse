@@ -1,0 +1,56 @@
+/* static/css/creditworthiness.css */
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #76ff03;
+}
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+button, input[type="submit"] {
+    background-color: #76ff03;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #64dd17;
+}
+
+.error {
+    color: #ff5252;
+    font-size: 0.9em;
+}
